@@ -8,13 +8,9 @@ import Expertise from "../components/expertise";
 import Footer from "../components/footer";
 import Home from "../components/home";
 import Header from "../components/header";
-//import { connectDatabase } from '../utils/db'; 
-// TODO: uncomment after setting up the db
 
 const Portfolio = () => {
-  // useEffect(() => {
-  //   connectDatabase();
-  // }, []);
+  ;
 
   return (
     <>
