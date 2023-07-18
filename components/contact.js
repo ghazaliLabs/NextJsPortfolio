@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { Modal, TextField, Button, Box} from '@mui/material';
+import EmailIcon from '@mui/icons-material/Email';
+import SendIcon from '@mui/icons-material/Send';
 
 const Contact = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [open, setOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,6 +38,19 @@ const Contact = () => {
     } catch (error) {
       console.error('Error:', error);
     }
+  };
+
+  const modalStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: '#ffffff', // Background color (white in this example)
+    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', // Box shadow
+    p: 4,
+    borderRadius: '8px',
+    fontFamily: 'Quicksand', // Change font to QuickSand
   };
 
   return (
@@ -121,11 +138,69 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[55px] left-[36px] w-[393px] h-36 overflow-hidden" />
-      <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[215px] left-[36px] w-[404px] h-28 overflow-hidden" />
-      <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[353px] left-[39px] w-[421px] h-[173px] overflow-hidden" />
+      <button
+        className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[55px] left-[36px] w-[393px] h-36 overflow-hidden"
+        onClick={() => setOpen(true)}
+      />
+      <button
+        className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[215px] left-[36px] w-[404px] h-28 overflow-hidden"
+        onClick={() => setOpen(true)}
+      />
+      <button
+        className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[353px] left-[39px] w-[421px] h-[173px] overflow-hidden"
+        onClick={() => setOpen(true)}
+      />
+
+      {/* Modal */}
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <Box sx={modalStyle}>
+          <h2><EmailIcon sx={{ fontSize: 30, marginRight: '10px', marginTop: '5px' }} />
+          Send Message</h2>
+          <form onSubmit={handleSubmit}>
+            <TextField
+              label="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              fullWidth
+              margin="normal"
+              variant="outlined"
+            />
+            <TextField
+              label="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              fullWidth
+              margin="normal"
+              variant="outlined"
+            />
+            <TextField
+              label="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              fullWidth
+              margin="normal"
+              variant="outlined"
+            />
+            <TextField
+              label="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              multiline
+              rows={4}
+              fullWidth
+              margin="normal"
+              variant="outlined"
+            />
+            <Button type="submit" variant="contained" color="primary">
+            <SendIcon sx={{ marginRight: '8px' }} />
+              Send
+            </Button>
+          </form>
+        </Box>
+      </Modal>
     </div>
   );
 };
+
 
 export default Contact;
