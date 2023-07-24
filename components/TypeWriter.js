@@ -1,7 +1,6 @@
-// @/components/Home/TypeWriter.js
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-export default function TypeWriter({ appendClass, hats, prefix }) {
+export default function TypeWriter({ appendClass, hats, prefix, startDelay }) {
     // Outer container base class + append custom class
     let className = "flex flex-col gap-4";
     if (appendClass) className += " " + appendClass;
@@ -16,8 +15,7 @@ export default function TypeWriter({ appendClass, hats, prefix }) {
     const [collapseClass, setCollapseClass] = useState(" w-0");
 
     useEffect(() => {
-        setTimeout(() => setCollapseClass(" w-full"), 100);
-
+        // Function to increment the hat index and change the displayed text
         const incrementHat = async () => {
             // Set the width to 0 - transition duration is 1000ms
             setCollapseClass(" w-0");
@@ -33,7 +31,6 @@ export default function TypeWriter({ appendClass, hats, prefix }) {
                     } else {
                         hatIndex = oldVal + 1;
                     }
-
                     return hatIndex;
                 });
             }, 1100);
@@ -41,13 +38,26 @@ export default function TypeWriter({ appendClass, hats, prefix }) {
             setTimeout(() => {
                 setCollapseClass(" w-full");
             }, 1000);
-        }
-        // Interval timer to change text every 4000ms
-        const id = setInterval(incrementHat, 4000);
+        };
 
-        // Cleanup interval timer
-        return () => clearInterval(id);
-    }, []); //  eslint-disable-line react-hooks/exhaustive-deps
+        // Start typewriter effect after the specified startDelay (in milliseconds)
+        const startTypewriter = () => {
+            setTimeout(() => {
+                // Initial start of the typewriter effect
+                setCollapseClass(' w-full');
+
+                // Interval timer to change text every 2500ms
+                const id = setInterval(incrementHat, 2500);
+
+                // Cleanup interval timer
+                return () => clearInterval(id);
+            }, startDelay); // Set the start delay here (in milliseconds)
+        };
+
+        // Call the function to start the typewriter effect after the delay
+        startTypewriter();
+
+    }, [startDelay]); // Include startDelay in the dependency array
 
     return (
         <div className={className}>
@@ -59,5 +69,5 @@ export default function TypeWriter({ appendClass, hats, prefix }) {
                 <div className={`${typeWriterClass}${collapseClass}`}>{hats[currentHat].suffix}</div>
             </div>
         </div>
-    )
+    );
 }

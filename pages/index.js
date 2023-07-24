@@ -18,7 +18,7 @@ const Portfolio = () => {
         <title>Portfolio</title>
         <meta name="description" content="Portfolio Website " />
       </Head>
-      <div className="relative bg-whitesmoke-100 w-full h-[8647px] overflow-hidden">
+      <div className="relative bg-whitesmoke-100 w-full h-[7670px] overflow-hidden">
         <Stats />
         <Testimonials />
         <Process />

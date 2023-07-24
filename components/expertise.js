@@ -54,8 +54,8 @@ const Expertise = () => {
           src="/djangologonegative@2x.png"
         />
         <img
-          className="absolute top-[357.97px] left-[187.84px] w-[152.27px] h-[190.92px] object-cover"
-          alt=""
+          className="absolute top-[354px] left-[187.84px] w-[152.27px] h-[192px] object-cover"
+          alt="Flask"
           src="/flasklogopngtransparent@2x.png"
         />
         <img

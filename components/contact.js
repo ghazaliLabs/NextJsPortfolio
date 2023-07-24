@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import { Modal, TextField, Button, Box} from '@mui/material';
-import EmailIcon from '@mui/icons-material/Email';
-import SendIcon from '@mui/icons-material/Send';
+
 
 const Contact = () => {
   const [firstName, setFirstName] = useState('');
@@ -107,6 +105,13 @@ const Contact = () => {
                 placeholder="First Name"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
+                style={{
+            fontFamily: 'quicksand',
+            fontSize: '16px',
+            fontWeight: '400px',
+            color: '#2e3842',
+            padding: '10px'
+          }}
               />
               <input
                 className="bg-[transparent] absolute top-[376px] left-[45px] rounded-8xs box-border w-[792px] h-[50px] border-[1px] border-solid border-black"
@@ -114,6 +119,13 @@ const Contact = () => {
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                style={{
+            fontFamily: 'quicksand',
+            fontSize: '16px',
+            fontWeight: '400px',
+            color: '#2e3842',
+            padding: '10px'
+          }}
               />
               <input
                 className="bg-[transparent] absolute top-[476px] left-[45px] rounded-3xs box-border w-[792px] h-[341px] border-[1px] border-solid border-black"
@@ -121,6 +133,14 @@ const Contact = () => {
                 placeholder="Message..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                style={{
+            fontFamily: 'quicksand',
+            fontSize: '16px',
+            fontWeight: '700px',
+            color: '#2e3842',
+            padding: '10px 10px 290px 25px',
+    
+          }}
               />
               <input
                 className="bg-[transparent] absolute top-[298px] left-[453px] rounded-8xs box-border w-96 h-[50px] border-[1px] border-solid border-black"
@@ -128,6 +148,13 @@ const Contact = () => {
                 placeholder="Last Name"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
+                style={{
+            fontFamily: 'quicksand',
+            fontSize: '16px',
+            fontWeight: '400px',
+            color: '#2e3842',
+            padding: '10px'
+          }}
               />
               <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[858px] left-[706px] w-[131px] h-[50px]">
                 <div className="absolute top-[0px] left-[0px] rounded-8xs bg-gray-200 w-[131px] h-[50px]" />
@@ -150,54 +177,6 @@ const Contact = () => {
         className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[353px] left-[39px] w-[421px] h-[173px] overflow-hidden"
         onClick={() => setOpen(true)}
       />
-
-      {/* Modal */}
-      <Modal open={open} onClose={() => setOpen(false)}>
-        <Box sx={modalStyle}>
-          <h2><EmailIcon sx={{ fontSize: 30, marginRight: '10px', marginTop: '5px' }} />
-          Send Message</h2>
-          <form onSubmit={handleSubmit}>
-            <TextField
-              label="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              fullWidth
-              margin="normal"
-              variant="outlined"
-            />
-            <TextField
-              label="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              fullWidth
-              margin="normal"
-              variant="outlined"
-            />
-            <TextField
-              label="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              fullWidth
-              margin="normal"
-              variant="outlined"
-            />
-            <TextField
-              label="Message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              multiline
-              rows={4}
-              fullWidth
-              margin="normal"
-              variant="outlined"
-            />
-            <Button type="submit" variant="contained" color="primary">
-            <SendIcon sx={{ marginRight: '8px' }} />
-              Send
-            </Button>
-          </form>
-        </Box>
-      </Modal>
     </div>
   );
 };

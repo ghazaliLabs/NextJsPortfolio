@@ -1,4 +1,8 @@
+import React, { useState } from "react";
 import TypeWriter from "./TypeWriter";
+import Lottie from "lottie-react";
+import { Player } from "@lottiefiles/react-lottie-player";
+
 const Home = () => {
   const hatsData = [
     {
@@ -13,7 +17,18 @@ const Home = () => {
       prep: '',
       suffix: 'Work'
     },
+    {
+      prep: '',
+      suffix: 'momeme'
+    }
   ];
+
+  const [showCursor, setShowCursor] = useState(true);
+
+  const handleClick = () => {
+    setShowCursor(false);
+  };
+
   return (
     <div
       className="absolute top-[0px] left-[0px] w-[1512px] h-[1048px] text-center text-29xl text-lavender font-quicksand"
@@ -25,13 +40,21 @@ const Home = () => {
       <div className="absolute top-[459px] left-[516px] w-[471px] h-[130.77px]">
         <b className="absolute top-[0px] left-[10px] inline-block w-[461px] h-[123.33px]">{`Experience Efficient `}</b>
         <b className="absolute top-[65px] left-[265px]">in Action</b>
-        <div className="absolute top-[61.67px] left-[0px] w-[252px] h-[69.11px] text-gray-100">
+        <div
+          className="absolute top-[61.67px] left-[0px] w-[252px] h-[69.11px] text-gray-100"
+          onClick={handleClick}
+        >
           <div className="absolute top-[0px] left-[0px] rounded-4xs bg-lavender w-[252px] h-[69.11px]" />
           <b className="absolute top-[4.33px] left-[6px] inline-block w-[241px] h-[58px]">
-          <TypeWriter appendClass="my-custom-class" hats={hatsData} prefix="" />
+            <TypeWriter appendClass="my-custom-class" startDelay={2750} hats={hatsData} prefix="" />
           </b>
         </div>
       </div>
+      <Player
+        className="absolute top-[533px] left-[516px] w-[252px] h-[101px] overflow-hidden"
+        autoplay
+        src="/mouseClick2.json"
+      />
     </div>
   );
 };

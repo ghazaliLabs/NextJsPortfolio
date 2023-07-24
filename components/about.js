@@ -37,7 +37,7 @@ const About = () => {
           />
         </div>
         <img
-          className="absolute top-[39.5px] left-[0px] w-[229px] h-px"
+          className="absolute top-[39.5px] left-[0px] w-[233px] h[]-px"
           alt=""
           src="/vector-3.svg"
         />
