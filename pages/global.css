@@ -86,3 +86,17 @@ body {
       border-color: orange; 
   }
 }
+
+.message {
+  padding: 8px;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+.user {
+  background-color: #e5e5e5;
+}
+
+.bot {
+  background-color: #efefef;
+}

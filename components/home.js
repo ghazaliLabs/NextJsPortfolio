@@ -16,10 +16,6 @@ const Home = () => {
     {
       prep: '',
       suffix: 'Work'
-    },
-    {
-      prep: '',
-      suffix: 'momeme'
     }
   ];
 

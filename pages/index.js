@@ -17,6 +17,7 @@ const Portfolio = () => {
       <Head>
         <title>Portfolio</title>
         <meta name="description" content="Portfolio Website " />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="relative bg-whitesmoke-100 w-full h-[7670px] overflow-hidden">
         <Stats />
@@ -27,7 +28,7 @@ const Portfolio = () => {
         <Expertise />
         <Footer />
         <Home />
-        <Header />
+        <Header />  
       </div>
     </>
   );

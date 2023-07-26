@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import App from '../components/chatBot';
 
 const Header = () => {
   const onHomeTextClick = useCallback(() => {
@@ -41,6 +42,7 @@ const Header = () => {
           Connect with Me
         </div>
       </div>
+      <App />
     </div>
   );
 };
