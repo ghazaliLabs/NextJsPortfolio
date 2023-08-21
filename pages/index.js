@@ -8,6 +8,14 @@ import Expertise from "../components/expertise";
 import Footer from "../components/footer";
 import Home from "../components/home";
 import Header from "../components/header";
+import MHome from "../components/mhome";
+import MExpertise from "../components/mexpertise";
+import MProcess from "../components/mprocess";
+import MContact from "../components/mcontact";
+import MFooter from "../components/mfooter";
+import MTestimonials from "../components/mtestimonials";
+import MIntro from "../components/mintro";
+
 
 const Portfolio = () => {
   ;
@@ -19,7 +27,7 @@ const Portfolio = () => {
         <meta name="description" content="Portfolio Website " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="relative bg-whitesmoke-100 w-full h-[7670px] overflow-hidden">
+      <div className="switch_view relative bg-whitesmoke-100 w-full h-[7670px] overflow-hidden">
         <Stats />
         <Testimonials />
         <Process />
@@ -28,7 +36,16 @@ const Portfolio = () => {
         <Expertise />
         <Footer />
         <Home />
-        <Header />  
+        <Header /> 
+        </div>
+        <div className="switch_mview relative bg-whitesmoke-100 w-full h-[4527px] overflow-hidden">
+        <MExpertise />
+        <MTestimonials />
+        <MProcess />
+        <MFooter />
+        <MIntro />
+        <MContact />
+        <MHome />
       </div>
     </>
   );
