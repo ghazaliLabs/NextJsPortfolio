@@ -1,22 +1,28 @@
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 
 const Intro = () => {
+  const processContainerRef = useRef(null);
+
   const onFrame1Click = useCallback(() => {
-    const anchor = document.querySelector(
-      "[data-scroll-to='processContainer']"
-    );
-    if (anchor) {
-      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (processContainerRef.current) {
+      const yOffset = processContainerRef.current.offsetTop + 2900;
+      window.scrollTo({ top: yOffset, behavior: "smooth" });
     }
   }, []);
 
   return (
 <div className=" w-[414px] h-[454px] mt- relative bg-[#1b2131]">
   <div className="w-[136px] h-7">
-    <p className="underline w-[136px] h-7 absolute left-32 top-[380px] text-[13px] font-bold text-left text-[#d3defb] font-poppins">
+  <div
+          ref={processContainerRef}
+          data-scroll-to="processContainer"
+        >
+    <p  onClick={onFrame1Click}
+    className="underline w-[136px] h-7 absolute left-32 top-[380px] text-[13px] font-bold text-left text-[#d3defb] font-poppins">
       SEE MY PROCESS
     <img src={"arrow.svg"} alt="Arrow Icon" className="inline-block w-4 h-3 ml-1" />
     </p>
+    </div>
   </div>
   <p className="w-[239px] h-[191px] absolute left-[76px] top-[129px] text-[14px] text-center text-[#f2f2f2] font-poppins">
     I'm ISannan, a self-taught full-stack &amp; NLP developer with 5+ years' experience, handling
