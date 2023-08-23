@@ -1,7 +1,7 @@
 const MFooter = () => {
   return (
     <div className="absolute top-[4427px] left-[0px] w-[390px] h-[100px] text-left text-5xs text-white font-poppins">
-      <footer className="absolute top-[0px] left-[0px] bg-gray-300 w-[390px] h-[100px]" />
+      <footer className="absolute top-[0px] left-[0px] bg-gray-300 w-[490px] h-[100px]" />
       <img
         className="absolute top-[14px] left-[9px] w-[59px] h-5 object-cover"
         alt=""

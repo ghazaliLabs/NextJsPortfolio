@@ -11,7 +11,7 @@ const Intro = () => {
   }, []);
 
   return (
-<div className="w-[390px] h-[454px] mt- relative bg-[#1b2131]">
+<div className=" w-[414px] h-[454px] mt- relative bg-[#1b2131]">
   <div className="w-[136px] h-7">
     <p className="underline w-[136px] h-7 absolute left-32 top-[380px] text-[13px] font-bold text-left text-[#d3defb] font-poppins">
       SEE MY PROCESS
@@ -23,7 +23,7 @@ const Intro = () => {
     80+ projects. I excel at planning and executing efficient full-stack projects with exceptional
     speed while ensuring top-notch performance, security, and maintainability.
   </p>
-  <div className="flex justify-center">
+  <div className="flex justify-center ">
     <svg
       width={42}
       height={42}

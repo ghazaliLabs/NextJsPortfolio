@@ -32,8 +32,8 @@ const MProcess = () => {
   }, []);
 
   return (
-    <div className=" w-[390px] h-[980px]">
-    <div className="w-[390px] h-[1143px] absolute left-[-0.5px] top-[2630.5px] bg-[#1b2131]" />
+    <div className="  h-[980px]">
+    <div className="w-[490px] h-[1143px] absolute left-[-0.5px] top-[2630.5px] bg-[#1b2131]" />
     <div className="w-[347.84px] h-[762.59px]">
       <svg
         width={4}

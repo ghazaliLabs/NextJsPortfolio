@@ -2,8 +2,8 @@ import App from "./chatBot";
 
 const MHome = () => {
   return (
-    <div className="absolute top-[0px] left-[0px] w-[390px] h-[983px] text-center text-17xl text-lavender font-quicksand">
-      <div className="absolute top-[0px] left-[0px] bg-gray-300 w-[390px] h-[578px]" />
+    <div className="absolute top-[0px] left-[0px] w-[490px] h-[983px] text-center text-17xl text-lavender font-quicksand">
+      <div className="absolute top-[0px] left-[0px] bg-gray-300 w-[490px] h-[578px]" />
       <div className="absolute top-[122px] left-[19px] w-[352px] h-[123px]">
         <div className="absolute top-[0px] left-[0px] w-[352px] h-[123px]">
           <div className="absolute top-[42px] left-[22px] rounded-4xs bg-lavender w-[160px] h-10" />
@@ -35,8 +35,8 @@ const MHome = () => {
         alt=""
         src="/mdihamburgermenu.svg"
       />
-      <div className="absolute top-[907px] left-[0px] w-[390px] h-[76px] text-5xl text-gray-200 font-poppins">
-        <div className="absolute top-[0px] left-[0px] bg-white w-[390px] h-[76px]" />
+      <div className="absolute top-[907px] left-[0px] w-[490px] h-[76px] text-5xl text-gray-200 font-poppins">
+        <div className="absolute top-[0px] left-[0px] bg-white w-[490px] h-[76px]" />
         <div className="absolute top-[0px] left-[21px] w-[152px] h-[57.06px]">
           <div className="absolute top-[-14.3px] left-[0px] bg-white w-[768px] h-[118px] hidden" />
           <b className="absolute top-[0px] left-[0px] inline-block w-[152px] h-[34.57px]">
@@ -55,7 +55,7 @@ const MHome = () => {
           </b>
         </div>
       </div>
-      <div className="absolute top-[831px] left-[0px] bg-white w-[390px] h-[76px]" />
+      <div className="absolute top-[831px] left-[0px] bg-white w-[490px] h-[76px]" />
       <img
         className="absolute top-[836px] left-[170px] w-[116px] h-[66px] object-cover"
         alt=""

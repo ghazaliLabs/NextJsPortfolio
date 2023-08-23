@@ -88,7 +88,7 @@ const MExpertise = () => {
           src="/512pxsvelte-logo-1@2x.png"
         />
       </div>
-      <div className="absolute top-[279px] left-[40px] [background:linear-gradient(0deg,_#000,_rgba(217,_217,_217,_0))] w-[390px] h-[404px]" />
+      <div className="absolute top-[279px] left-[40px] [background:linear-gradient(0deg,_#000,_rgba(217,_217,_217,_0))] w-[490px] h-[404px]" />
       <div className="absolute top-[79px] left-[55px] w-[363px] h-[355px]">
         <div className="absolute top-[0px] left-[0px] w-[363px] h-[355px]">
           <b className="absolute top-[0px] left-[0px] inline-block w-[228px] h-[43px]">

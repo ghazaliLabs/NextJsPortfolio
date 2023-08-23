@@ -38,7 +38,7 @@ const Portfolio = () => {
         <Home />
         <Header /> 
         </div>
-        <div className="switch_mview relative bg-whitesmoke-100 w-full h-[4527px] overflow-hidden">
+        <div className="switch_mview w-screen relative bg-whitesmoke-100  h-[4527px] overflow-hidden">
         <MExpertise />
         <MTestimonials />
         <MProcess />
